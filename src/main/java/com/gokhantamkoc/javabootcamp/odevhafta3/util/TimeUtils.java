@@ -21,7 +21,7 @@ public class TimeUtils {
 
 	public static Date convertToDate(long millis) {
 		// Bu metodu doldurmanizi bekliyoruz.
-		Date d=new Date(millis);
-		return d;
+		Date dateControl=new Date(millis);
+		return dateControl;
 	}
 }

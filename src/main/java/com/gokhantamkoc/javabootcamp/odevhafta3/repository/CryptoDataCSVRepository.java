@@ -23,11 +23,11 @@ public class CryptoDataCSVRepository implements CSVRepository {
 		InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(filename);
 		// Bu alandan itibaren kodunuzu yazabilirsiniz
 		
-		InputStreamReader myInputStreamreader = new InputStreamReader(inputStream);
-			try (BufferedReader br = new BufferedReader(myInputStreamreader)) {
+		InputStreamReader ourInputStreamreader = new InputStreamReader(inputStream);
+			try (BufferedReader bufferedReader = new BufferedReader(ourInputStreamreader)) {
 		    String line;
-		    br.readLine();
-		    while ((line = br.readLine()) != null) {
+		    bufferedReader.readLine();
+		    while ((line = bufferedReader.readLine()) != null) {
 		    	
 		        String[] values = line.split(COMMA_DELIMITER);
 		        
